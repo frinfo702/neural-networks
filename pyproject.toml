@@ -16,4 +16,12 @@ dependencies = [
 dev = [
     "basedpyright>=1.39.5",
     "notebook>=7.5.6",
+    "pytest>=9.0.3",
 ]
+
+[tool.hatch.build.targets.wheel]
+packages = ["micrograd"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

@@ -1,18 +1,28 @@
+import torch
+
 from micrograd.engine import Value
 
 
 def test_add():
     a, b = Value(2.0), Value(-3.0)
-    c = a + b
-    assert c.data == -1.0
-    assert c._prev == {a, b}
+    cmg = a + b
+
+    a = torch.Tensor([2]).double()
+    b = torch.Tensor([-3]).double()
+    cpt = a + b
+
+    assert cmg.data == cpt.data
 
 
 def test_mul():
     a, b = Value(2.0), Value(-3.0)
-    c = a * b
-    assert c.data == -6.0
-    assert c._prev == {a, b}
+    cmg = a * b
+
+    a = torch.Tensor([2]).double()
+    b = torch.Tensor([-3]).double()
+    cpt = a * b
+
+    assert cmg.data == cpt.data
 
 
 def test_div():

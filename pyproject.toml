@@ -10,6 +10,7 @@ dependencies = [
     "matplotlib>=3.10.9",
     "numpy>=2.4.6",
     "ruff>=0.15.13",
+    "torch>=2.12.0",
 ]
 
 [dependency-groups]

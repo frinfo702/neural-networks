@@ -39,7 +39,7 @@ class Value:
 
         return out
 
-    # otehr * self
+    # other * self
     def __rmul__(self, other):
         return self * other
 
